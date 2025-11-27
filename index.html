@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jerwin's - Premium Hygienic Products</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>Jerwin's</h1>
+                <span class="tagline">Premium Hygienic Care</span>
+            </div>
+            <nav class="nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#categories" class="nav-link">Categories</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Experience Premium Hygienic Care</h2>
+            <p>Discover our exclusive collection of soaps, lotions, and shampoos crafted for your daily luxury</p>
+            <button class="cta-button" onclick="scrollToCategories()">Shop Now</button>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories-section">
+        <div class="container">
+            <h2 class="section-title">Our Premium Categories</h2>
+            
+            <!-- Category Sidebar -->
+            <div class="category-sidebar">
+                <div class="category-nav">
+                    <button class="category-btn active" onclick="showCategory('soap')">
+                        <i class="fas fa-soap"></i>
+                        <span>Soap Collection</span>
+                    </button>
+                    <button class="category-btn" onclick="showCategory('lotion')">
+                        <i class="fas fa-hand-sparkles"></i>
+                        <span>Lotion Collection</span>
+                    </button>
+                    <button class="category-btn" onclick="showCategory('shampoo')">
+                        <i class="fas fa-pump-soap"></i>
+                        <span>Shampoo Collection</span>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Products Container -->
+            <div class="products-container">
+                <!-- Soap Category -->
+                <div id="soap-category" class="category-window active">
+                    <h3 class="category-title">Luxury Soap Collection</h3>
+                    <div class="products-grid">
+                        <div class="product-card" data-product-id="soap1">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1607006344380-b6775a0824a7?w=400&h=300&fit=crop" alt="Premium Lavender Soap">
+                                <div class="product-overlay">
+                                    <button class="quick-view-btn" onclick="showProductDetails('soap1')">Quick View</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Premium Lavender Soap</h4>
+                                <p class="product-desc">Organic lavender-infused soap</p>
+                                <div class="price-rating">
+                                    <span class="price">₱299.00</span>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span>(4.5)</span>
+                                    </div>
+                                </div>
+                                <button class="add-to-cart-btn" onclick="addToCart('soap1', 'Premium Lavender Soap', 299)">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-id="soap2">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1600857544200-b2f666a9a2ec?w=400&h=300&fit=crop" alt="Charcoal Detox Soap">
+                                <div class="product-overlay">
+                                    <button class="quick-view-btn" onclick="showProductDetails('soap2')">Quick View</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Charcoal Detox Soap</h4>
+                                <p class="product-desc">Deep cleansing activated charcoal</p>
+                                <div class="price-rating">
+                                    <span class="price">₱349.00</span>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>(5.0)</span>
+                                    </div>
+                                </div>
+                                <button class="add-to-cart-btn" onclick="addToCart('soap2', 'Charcoal Detox Soap', 349)">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-id="soap3">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1617897903246-719242758050?w=400&h=300&fit=crop" alt="Honey Oatmeal Soap">
+                                <div class="product-overlay">
+                                    <button class="quick-view-btn" onclick="showProductDetails('soap3')">Quick View</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Honey Oatmeal Soap</h4>
+                                <p class="product-desc">Moisturizing honey & oatmeal blend</p>
+                                <div class="price-rating">
+                                    <span class="price">₱279.00</span>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <span>(4.0)</span>
+                                    </div>
+                                </div>
+                                <button class="add-to-cart-btn" onclick="addToCart('soap3', 'Honey Oatmeal Soap', 279)">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-id="soap4">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=400&h=300&fit=crop" alt="Tea Tree Oil Soap">
+                                <div class="product-overlay">
+                                    <button class="quick-view-btn" onclick="showProductDetails('soap4')">Quick View</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Tea Tree Oil Soap</h4>
+                                <p class="product-desc">Antibacterial tea tree formula</p>
+                                <div class="price-rating">
+                                    <span class="price">₱329.00</span>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span>(4.7)</span>
+                                    </div>
+                                </div>
+                                <button class="add-to-cart-btn" onclick="addToCart('soap4', 'Tea Tree Oil Soap', 329)">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-id="soap5">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1607006341952-1c1c5175e3b0?w=400&h=300&fit=crop" alt="Rose Petal Soap">
+                                <div class="product-overlay">
+                                    <button class="quick-view-btn" onclick="showProductDetails('soap5')">Quick View</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Rose Petal Soap</h4>
+                                <p class="product-desc">Luxurious rose-infused soap</p>
+                                <div class="price-rating">
+                                    <span class="price">₱389.00</span>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>(4.9)</span>
+                                    </div>
+                                </div>
+                                <button class="add-to-cart-btn" onclick="addToCart('soap5', 'Rose Petal Soap', 389)">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lotion Category -->
+                <div id="lotion-category" class="category-window">
+                    <h3 class="category-title">Premium Lotion Collection</h3>
+                    <div class="products-grid">
+                        <div class="product-card" data-product-id="lotion1">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=400&h=300&fit=crop" alt="Shea Butter Lotion">
+                                <div class="product-overlay">
+                                    <button class="quick-view-btn" onclick="showProductDetails('lotion1')">Quick View</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Shea Butter Lotion</h4>
+                                <p class="product-desc">Intensive moisturizing formula</p>
+                                <div class="price-rating">
+                                    <span class="price">₱459.00</span>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span>(4.6)</span>
+                                    </div>
+                                </div>
+                                <button class="add-to-cart-btn" onclick="addToCart('lotion1', 'Shea Butter Lotion', 459)">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-id="lotion2">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop" alt="Aloe Vera Lotion">
+                                <div class="product-overlay">
+                                    <button class="quick-view-btn" onclick="showProductDetails('lotion2')">Quick View</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Aloe Vera Lotion</h4>
+                                <p class="product-desc">Soothing aloe vera extract</p>
+                                <div class="price-rating">
+                                    <span class="price">₱379.00</span>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <span>(4.2)</span>
+                                    </div>
+                                </div>
+                                <button class="add-to-cart-btn" onclick="addToCart('lotion2', 'Aloe Vera Lotion', 379)">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-id="lotion3">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=400&h=300&fit=crop" alt="Vitamin E Lotion">
+                                <div class="product-overlay">
+                                    <button class="quick-view-btn" onclick="showProductDetails('lotion3')">Quick View</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Vitamin E Lotion</h4>
+                                <p class="product-desc">Antioxidant-rich vitamin E</p>
+                                <div class="price-rating">
+                                    <span class="price">₱429.00</span>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>(4.8)</span>
+                                    </div>
+                                </div>
+                                <button class="add-to-cart-btn" onclick="addToCart('lotion3', 'Vitamin E Lotion', 429)">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-id="lotion4">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?w=400&h=300&fit=crop" alt="Coconut Milk Lotion">
+                                <div class="product-overlay">
+                                    <button class="quick-view-btn" onclick="showProductDetails('lotion4')">Quick View</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Coconut Milk Lotion</h4>
+                                <p class="product-desc">Hydrating coconut milk blend</p>
+                                <div class="price-rating">
+                                    <span class="price">₱399.00</span>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span>(4.4)</span>
+                                    </div>
+                                </div>
+                                <button class="add-to-cart-btn" onclick="addToCart('lotion4', 'Coconut Milk Lotion', 399)">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-id="lotion5">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?w=400&h=300&fit=crop" alt="Argan Oil Lotion">
+                                <div class="product-overlay">
+                                    <button class="quick-view-btn" onclick="showProductDetails('lotion5')">Quick View</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Argan Oil Lotion</h4>
+                                <p class="product-desc">Moroccan argan oil luxury</p>
+                                <div class="price-rating">
+                                    <span class="price">₱499.00</span>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>(5.0)</span>
+                                    </div>
+                                </div>
+                                <button class="add-to-cart-btn" onclick="addToCart('lotion5', 'Argan Oil Lotion', 499)">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Shampoo Category -->
+                <div id="shampoo-category" class="category-window">
+                    <h3 class="category-title">Premium Shampoo Collection</h3>
+                    <div class="products-grid">
+                        <div class="product-card" data-product-id="shampoo1">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1589739900213-a41147f07423?w=400&h=300&fit=crop" alt="Keratin Shampoo">
+                                <div class="product-overlay">
+                                    <button class="quick-view-btn" onclick="showProductDetails('shampoo1')">Quick View</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Keratin Shampoo</h4>
+                                <p class="product-desc">Hair strengthening formula</p>
+                                <div class="price-rating">
+                                    <span class="price">₱529.00</span>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span>(4.7)</span>
+                                    </div>
+                                </div>
+                                <button class="add-to-cart-btn" onclick="addToCart('shampoo1', 'Keratin Shampoo', 529)">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-id="shampoo2">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1560691023-ca1f295a5173?w=400&h=300&fit=crop" alt="Argan Oil Shampoo">
+                                <div class="product-overlay">
+                                    <button class="quick-view-btn" onclick="showProductDetails('shampoo2')">Quick View</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Argan Oil Shampoo</h4>
+                                <p class="product-desc">Nourishing Moroccan oil blend</p>
+                                <div class="price-rating">
+                                    <span class="price">₱589.00</span>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <span>(4.9)</span>
+                                    </div>
+                                </div>
+                                <button class="add-to-cart-btn" onclick="addToCart('shampoo2', 'Argan Oil Shampoo', 589)">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-id="shampoo3">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1543615423-83a3737035d8?w=400&h=300&fit=crop" alt="Tea Tree Shampoo">
+                                <div class="product-overlay">
+                                    <button class="quick-view-btn" onclick="showProductDetails('shampoo3')">Quick View</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Tea Tree Shampoo</h4>
+                                <p class="product-desc">Anti-dandruff scalp treatment</p>
+                                <div class="price-rating">
+                                    <span class="price">₱449.00</span>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <span>(4.3)</span>
+                                    </div>
+                                </div>
+                                <button class="add-to-cart-btn" onclick="addToCart('shampoo3', 'Tea Tree Shampoo', 449)">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-id="shampoo4">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1506808543189-7e8eae5824cb?w=400&h=300&fit=crop" alt="Coconut Milk Shampoo">
+                                <div class="product-overlay">
+                                    <button class="quick-view-btn" onclick="showProductDetails('shampoo4')">Quick View</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Coconut Milk Shampoo</h4>
+                                <p class="product-desc">Hydrating coconut milk formula</p>
+                                <div class="price-rating">
+                                    <span class="price">₱419.00</span>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <span>(4.5)</span>
+                                    </div>
+                                </div>
+                                <button class="add-to-cart-btn" onclick="addToCart('shampoo4', 'Coconut Milk Shampoo', 419)">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="product-card" data-product-id="shampoo5">
+                            <div class="product-image">
+                                <img src="https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=400&h=300&fit=crop" alt="Aloe Vera Shampoo">
+                                <div class="product-overlay">
+                                    <button class="quick-view-btn" onclick="showProductDetails('shampoo5')">Quick View</button>
+                                </div>
+                            </div>
+                            <div class="product-info">
+                                <h4>Aloe Vera Shampoo</h4>
+                                <p class="product-desc">Soothing scalp care formula</p>
+                                <div class="price-rating">
+                                    <span class="price">₱379.00</span>
+                                    <div class="rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="far fa-star"></i>
+                                        <span>(4.1)</span>
+                                    </div>
+                                </div>
+                                <button class="add-to-cart-btn" onclick="addToCart('shampoo5', 'Aloe Vera Shampoo', 379)">
+                                    <i class="fas fa-shopping-cart"></i> Add to Cart
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Details Modal -->
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeProductDetails()">&times;</span>
+            <div id="productDetailsContent"></div>
+        </div>
+    </div>
+
+    <!-- My Orders Button -->
+    <div class="orders-button" onclick="toggleOrders()">
+        <i class="fas fa-shopping-bag"></i>
+        <span class="orders-count" id="ordersCount">0</span>
+    </div>
+
+    <!-- My Orders Panel -->
+    <div id="ordersPanel" class="orders-panel">
+        <div class="orders-header">
+            <h3>My Orders</h3>
+            <button class="close-orders" onclick="toggleOrders()">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="orders-content" id="ordersContent">
+            <p class="empty-orders">No orders yet</p>
+        </div>
+        <div class="orders-footer">
+            <div class="total-price">
+                <span>Total: ₱<span id="totalPrice">0.00</span></span>
+            </div>
+            <button class="checkout-btn" onclick="proceedToPayment()">
+                <i class="fas fa-credit-card"></i> Proceed to Payment
+            </button>
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="paymentModal" class="modal">
+        <div class="modal-content payment-modal">
+            <span class="close" onclick="closePaymentModal()">&times;</span>
+            <h2>Choose Payment Method</h2>
+            <div class="payment-methods">
+                <div class="payment-option" onclick="selectPayment('gcash')">
+                    <img src="https://logos-world.net/wp-content/uploads/2021/02/GCash-Logo.png" alt="GCash">
+                    <span>GCash</span>
+                </div>
+                <div class="payment-option" onclick="selectPayment('paymaya')">
+                    <img src="https://1000logos.net/wp-content/uploads/2023/05/PayMaya-Logo.png" alt="PayMaya">
+                    <span>PayMaya</span>
+                </div>
+                <div class="payment-option" onclick="selectPayment('card')">
+                    <i class="fas fa-credit-card"></i>
+                    <span>Credit/Debit Card</span>
+                </div>
+            </div>
+            <div id="paymentForm" class="payment-form" style="display: none;">
+                <h3 id="paymentMethodTitle"></h3>
+                <form id="checkoutForm">
+                    <div class="form-group">
+                        <label for="fullName">Full Name</label>
+                        <input type="text" id="fullName" required placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneNumber">Phone Number</label>
+                        <input type="tel" id="phoneNumber" required placeholder="09XXXXXXXXX">
+                    </div>
+                    <div class="form-group" id="cardFields" style="display: none;">
+                        <label for="cardNumber">Card Number</label>
+                        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
+                        <div class="card-row">
+                            <input type="text" id="expiry" placeholder="MM/YY">
+                            <input type="text" id="cvv" placeholder="CVV">
+                        </div>
+                    </div>
+                    <button type="submit" class="submit-payment-btn">Complete Order</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Message -->
+    <div id="successMessage" class="success-message">
+        <div class="success-content">
+            <i class="fas fa-check-circle"></i>
+            <h2>Thanks for your order!</h2>
+            <p>This is only a demo store</p>
+            <button onclick="closeSuccessMessage()">OK</button>
+        </div>
+    </div>
+
+    <script src="jr.js"></script>
+</body>
+</html>
